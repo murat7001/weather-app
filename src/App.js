@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './compenents/Card';
+import Dropdown from './compenents/Dropdown';
+import Lang from './compenents/Lang';
+import { CityProvider } from './contexts/CityContext';
+import { LangProvider } from './contexts/LangContext';
+import { WeatherProvider } from './contexts/WeatherContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <LangProvider>
+        <WeatherProvider>
+          <CityProvider>
+            <Dropdown/>
+            <Card/>
+            <Lang/>
+          </CityProvider>
+        </WeatherProvider>
+      </LangProvider>
     </div>
   );
 }

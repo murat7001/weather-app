@@ -1,38 +1,139 @@
-.App {
+body {
+  max-height: 100vh;
+  background-color: #c8a2c8;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+
+.card{
+  border-radius: 10px;
+  text-align: center;
   color: white;
+  padding: 0 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  transition: all 1.1s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover{
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+select {
+  background: linear-gradient(#d9abff, #906090);
+  margin: 1rem;
+  padding: .8rem 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 23px;
+  text-align: center;
+  appearance: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: aliceblue;
+  text-shadow: 0.1rem 0.1rem 0.25rem rgb(73, 71, 71);
+}
+
+
+
+/* select:hover {
+  background: linear-gradient(#c3c1c0, #ec9e66);
+  box-shadow: inset -1px -1px 32px #f7f7f5ae,
+      1px 1px 5px #d18143;
+} */
+
+/* select::-webkit-scrollbar {
+  display: none;
+} */
+
+/* width */
+select::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+select::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #604878;
+  border-radius: 10px;
+}
+
+/* Handle */
+select::-webkit-scrollbar-thumb {
+  background: #604878;
+  border-radius: 10px;
+}
+
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #906090;
+  color: white;
+  transition: all 1.1s ease;
+}
+
+button:hover {
+  opacity: .8;
+  transform: scale(1.1);
+}
+
+.lang{
+  margin-top: 30px;
+}
+
+.lang>option {
+  background-color: #906090;
+}
+
+
+@media only screen and (max-width: 950px) {
+  .container{
+    flex-flow: row wrap;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card{
+    flex-basis: auto;
+    margin-top: 20px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .card .date{
+    font-size: 16px;
+    padding: 5px;
+  }
+  h3{
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  select {
+    font-size: 16px;
+    margin: 0 1rem ;
   }
 }
